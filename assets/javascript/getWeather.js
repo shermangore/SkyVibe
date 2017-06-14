@@ -87,6 +87,8 @@ var mapWeatherCodes = function(weatherObject) {
 var getWeatherCategory = function(latitude, longitude) {
     return getWeather(latitude, longitude, function(data) {
         $("#player").html(spotify[mapWeatherCodes(data)]);
+        $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.icon + ".png");
+        $("#weather-desc").html(data.main);
     });
 }
 
