@@ -57,7 +57,7 @@ var mapWeatherCodes = function(weatherObject) {
         return "snowy";
     }
 
-    //7xx is 'Atmosphere'
+    //7xx is 'Atmospheree'
     else if (weatherId >= 700 && weatherId <800) {
         return "windy";
     }
