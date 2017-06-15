@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/a28dabef51.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-
-<body style="background: grey">
+<body>
     <div class="container" >
 
         <div class="row" >
@@ -49,28 +48,76 @@
             </div>
         </div>
     </div data="container">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        
+      </div>
+    </div>
+    <div class="col-md-2">
+      <i class="fa fa-gear fa-3x"></i>
+    </div>
+    <div class="modal" id="mapModal" tablindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <h4 class="modal-title" id="myModalLabel">Choose Your Location</h4>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        <button class="btn btn-primary">Save Location</button>
+      </div>
+    </div>
+  </div>
+    <div class="pac-card" id="pac-card">
+      <div>
+        <div id="title">
+          Search for a city
+        </div>
+        <!--<div id="type-selector" class="pac-controls">
+          <input type="radio" name="type" id="changetype-all" checked="checked">
+          <label for="changetype-all">All</label>
+
+          <input type="radio" name="type" id="changetype-establishment">
+          <label for="changetype-establishment">Establishments</label>
+
+          <input type="radio" name="type" id="changetype-address">
+          <label for="changetype-address">Addresses</label>
+
+          <input type="radio" name="type" id="changetype-geocode">
+          <label for="changetype-geocode">Geocodes</label>
+        </div>
+        <div id="strict-bounds-selector" class="pac-controls">
+          <input type="checkbox" id="use-strict-bounds" value="">
+          <label for="use-strict-bounds">Strict Bounds</label>
+        </div>-->
+      </div>
+      <div id="pac-container">
+        <input id="pac-input" type="text"
+            placeholder="Enter a location">
+      </div>
+    </div>
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <img src="" width="16" height="16" id="place-icon">
+      <span id="place-name"  class="title"></span><br>
+      <span id="place-address"></span>
+    </div>
 
 </body>
-
-<script src="assets/javascript/spotify.js"></script>
-<script src="assets/javascript/getWeather.js"></script>
-<script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=[key]&libraries=places"></script>
-<script src="assets/javascript/search.js"></script>
-<script>
- //feel free to delete this when appropriate. this is just to show spotify functionality
- $("#search").on("click", function() {
-
-     //get value of long; default to 0
-     var long = $("#long").val();
-     (long != '' && long < 180 && long > -180) ? long = long : long = 0;
-     //get value of lat; default to 0
-     var lat = $("#lat").val();
-     (lat != '' && lat < 180 && lat > -180) ? lat = lat : lat = 0;
-
-//     console.log("lat: " + lat + " long: " + long);
-     getWeatherCategory(lat, long);
- });
-</script>
+	<script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWdhrRJkoYANWTpKvH08zVJD3D8gXNRM0&types=(regions)&libraries=places&callback=initMap" async defer></script>
+  <script src="assets/javascript/spotify.js"></script>
+  <script src="assets/javascript/getWeather.js"></script>
+	<script src="assets/javascript/search.js"></script>
 </html>
