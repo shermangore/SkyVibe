@@ -65,6 +65,22 @@ body {
     border-color: #4d90fe;
 }
 
+.title-heading {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	margin-left: 32%;
+	margin-right: 33%;
+	text-align: center;
+	padding: 2em;
+	margin-top: 2%;
+	background-color: rgba(245, 245, 245, 0.4);
+	border-color: #d3d3d3;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 25px;
+
+}
+
 #title {
     color: #fff;
     background-color: #4d90fe;
@@ -82,17 +98,14 @@ body {
 	top: 5%;
 	right: 5%;
 	position: absolute;
+	color: white;
 }
 
 .weather-header {
-	background-color: rgba(245, 245, 245, 0.4);
-	width: 200px;
-	height: 150px;
-	border-color: #d3d3d3;
-	border-width: 2px;
-	border-style: solid;
-	border-radius: 25px;
+	
 	top: 5%;
 	left: 5%;
 	position: absolute;
+	color: white;
+	font-family: 'Raleway', sans-serif;
 }
