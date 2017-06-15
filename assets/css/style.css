@@ -10,6 +10,11 @@ html, body {
     padding: 0;
 }
 
+body {
+	background-image: url(http://blog.photobucket.com/wp-content/uploads/2014/06/WindThroughLeaf.gif);
+	background-size: cover;
+}
+
 #description {
     font-family: Roboto;
     font-size: 15px;
@@ -70,14 +75,24 @@ html, body {
 
 .fa-gear {
     cursor: pointer;
+
+}
+
+#mapModal {
+	top: 5%;
+	right: 5%;
+	position: absolute;
 }
 
 .weather-header {
 	background-color: rgba(245, 245, 245, 0.4);
-	width: 500px;
-	height: 350px;
+	width: 200px;
+	height: 150px;
 	border-color: #d3d3d3;
 	border-width: 2px;
 	border-style: solid;
 	border-radius: 25px;
+	top: 5%;
+	left: 5%;
+	position: absolute;
 }

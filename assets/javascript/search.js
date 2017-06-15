@@ -56,8 +56,11 @@ autocomplete.addListener('place_changed', function() {
         map.setCenter(place.geometry.location);
         map.setZoom(17);  // Why 17? Because it looks good.
     }
+
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
+
+    getWeatherCategory(place.geometry.location.lat(), place.geometry.location.lng());
 
     var address = '';
 
@@ -73,6 +76,7 @@ autocomplete.addListener('place_changed', function() {
     infowindowContent.children['place-name'].textContent = place.name;
     infowindowContent.children['place-address'].textContent = address;
     infowindow.open(map, marker);
+    $("#map").hide();
 });
 
 // Sets a listener on a radio button to change the filter type on Places
@@ -105,7 +109,7 @@ $(document).ready(function() {
 
         $mapDiv.toggle(400, "swing", function() {
             $("#pac-card").css("display", $mapDiv.css("display"));
-            
+
              if ("geolocation" in navigator) {
                  navigator.geolocation.getCurrentPosition(function(position) {
                      console.log(position);
@@ -125,19 +129,3 @@ $(document).ready(function() {
         //$("#infowindow-content").toggle();
     });
 });
-
-// var autocomplete = new google.maps.places.Autocomplete(input);
-
-// autocomplete.addListener('place_changed', function() {
-//     infowindow.close();
-//     marker.setVisible(false);
-    
-//     var place = autocomplete.getPlace();
-    
-//     if (!place.geometry) {
-//         // User entered the name of a Place that was not suggested and
-//         // pressed the Enter key, or the Place Details request failed.
-//         window.alert("No details available for input: '" + place.name + "'");
-//         return;
-//     }
-// });
