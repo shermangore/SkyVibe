@@ -12,4 +12,6 @@ function check() {
     } else if ($("#weather-desc").val() == "extreme") {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Extreme.gif)");
     }
-}
+};
+
+check();

@@ -98,17 +98,14 @@ body {
 	top: 5%;
 	right: 5%;
 	position: absolute;
+	color: white;
 }
 
 .weather-header {
-	background-color: rgba(245, 245, 245, 0.4);
-	width: 200px;
-	height: 150px;
-	border-color: #d3d3d3;
-	border-width: 2px;
-	border-style: solid;
-	border-radius: 25px;
+	
 	top: 5%;
 	left: 5%;
 	position: absolute;
+	color: white;
+	font-family: 'Raleway', sans-serif;
 }
