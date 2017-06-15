@@ -105,7 +105,7 @@ $(document).ready(function() {
 
         $mapDiv.toggle(400, "swing", function() {
             $("#pac-card").css("display", $mapDiv.css("display"));
-            
+
              if ("geolocation" in navigator) {
                  navigator.geolocation.getCurrentPosition(function(position) {
                      console.log(position);
@@ -125,3 +125,17 @@ $(document).ready(function() {
         //$("#infowindow-content").toggle();
     });
 });
+
+//  //feel free to delete this when appropriate. this is just to show spotify functionality
+//  $("#search").on("click", function() {
+
+//      //get value of long; default to 0
+//      var long = $("#long").val();
+//      (long != '' && long < 180 && long > -180) ? long = long : long = 0;
+//      //get value of lat; default to 0
+//      var lat = $("#lat").val();
+//      (lat != '' && lat < 180 && lat > -180) ? lat = lat : lat = 0;
+
+// //     console.log("lat: " + lat + " long: " + long);
+//      getWeatherCategory(lat, long);
+//  });
