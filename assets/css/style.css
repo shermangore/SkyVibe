@@ -1,0 +1,9 @@
+.weather-header {
+	background-color: rgba(245, 245, 245, 0.4);
+	width: 500px;
+	height: 350px;
+	border-color: #d3d3d3;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 25px;
+}
