@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
@@ -127,33 +126,16 @@ $(document).ready(function() {
     });
 });
 
-//  //feel free to delete this when appropriate. this is just to show spotify functionality
-//  $("#search").on("click", function() {
+ //feel free to delete this when appropriate. this is just to show spotify functionality
+ $("#search").on("click", function() {
 
-//      //get value of long; default to 0
-//      var long = $("#long").val();
-//      (long != '' && long < 180 && long > -180) ? long = long : long = 0;
-//      //get value of lat; default to 0
-//      var lat = $("#lat").val();
-//      (lat != '' && lat < 180 && lat > -180) ? lat = lat : lat = 0;
+     //get value of long; default to 0
+     var long = $("#long").val();
+     (long != '' && long < 180 && long > -180) ? long = long : long = 0;
+     //get value of lat; default to 0
+     var lat = $("#lat").val();
+     (lat != '' && lat < 180 && lat > -180) ? lat = lat : lat = 0;
 
-// //     console.log("lat: " + lat + " long: " + long);
-//      getWeatherCategory(lat, long);
-//  });
-=======
-var autocomplete = new google.maps.places.Autocomplete(input);
-
-autocomplete.addListener('place_changed', function() {
-    infowindow.close();
-    marker.setVisible(false);
-    
-    var place = autocomplete.getPlace();
-    
-    if (!place.geometry) {
-        // User entered the name of a Place that was not suggested and
-        // pressed the Enter key, or the Place Details request failed.
-        window.alert("No details available for input: '" + place.name + "'");
-        return;
-    }
-});
->>>>>>> cf71f1949ef8d73a9be612f63f124b21e41c769f
+//     console.log("lat: " + lat + " long: " + long);
+     getWeatherCategory(lat, long);
+ });

@@ -5,21 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-    <title>Document</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://use.fontawesome.com/a28dabef51.js"></script>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
-=======
     <title>SkyVibes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://use.fontawesome.com/a28dabef51.js"></script>
 </head>
 
 <body style="background: grey">
->>>>>>> cf71f1949ef8d73a9be612f63f124b21e41c769f
     <div class="container" >
 
         <div class="row" >
@@ -40,24 +32,15 @@
             </div data="col-xs-12">
 
         </div data="row">
-<<<<<<< HEAD
-
-        <div class="row" >
-            <div class="col-xs-2" >
-            </div>
-=======
  <!-- Temporarily commented out, originally Jason's code
         <div class="row" >
             <div class="col-xs-2" >
             </div>
             
->>>>>>> cf71f1949ef8d73a9be612f63f124b21e41c769f
             <div class="col-xs-8" >
                 <br><br><br>
                 <img src="" id="weather-icon" style="width:100%">
                 <h3 id="weather-desc" style="position: relative; bottom: 200px; padding: 75px"></h3>
-<<<<<<< HEAD
-=======
             </div> -->
 
 
@@ -66,7 +49,6 @@
             <div class="weather-header">
                 <img src="" id="weather-icon" style="width:100%">
                 <h3 id="weather-desc" style="position: relative; bottom: 200px; padding: 75px"></h3>
->>>>>>> cf71f1949ef8d73a9be612f63f124b21e41c769f
             </div>
             <div class="col-xs-2" >
             </div>                
@@ -77,7 +59,6 @@
             </div>
         </div>
     </div data="container">
-<<<<<<< HEAD
     <div class="container">
     <div class="row">
       <div class="col-md-10">
@@ -112,23 +93,6 @@
         <div id="title">
           Search for a city
         </div>
-        <!--<div id="type-selector" class="pac-controls">
-          <input type="radio" name="type" id="changetype-all" checked="checked">
-          <label for="changetype-all">All</label>
-
-          <input type="radio" name="type" id="changetype-establishment">
-          <label for="changetype-establishment">Establishments</label>
-
-          <input type="radio" name="type" id="changetype-address">
-          <label for="changetype-address">Addresses</label>
-
-          <input type="radio" name="type" id="changetype-geocode">
-          <label for="changetype-geocode">Geocodes</label>
-        </div>
-        <div id="strict-bounds-selector" class="pac-controls">
-          <input type="checkbox" id="use-strict-bounds" value="">
-          <label for="use-strict-bounds">Strict Bounds</label>
-        </div>-->
       </div>
       <div id="pac-container">
         <input id="pac-input" type="text"
@@ -141,18 +105,6 @@
       <span id="place-name"  class="title"></span><br>
       <span id="place-address"></span>
     </div>
-
-</body>
-	<script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
-	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWdhrRJkoYANWTpKvH08zVJD3D8gXNRM0&types=(regions)&libraries=places&callback=initMap" async defer></script>
-  <script src="assets/javascript/spotify.js"></script>
-  <script src="assets/javascript/getWeather.js"></script>
-	<script src="assets/javascript/search.js"></script>
-</html>
-=======
-
 </body>
 <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 <script>
@@ -168,12 +120,13 @@
   firebase.initializeApp(config);
 </script>
 
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWdhrRJkoYANWTpKvH08zVJD3D8gXNRM0&types=(regions)&libraries=places&callback=initMap" async defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="assets/javascript/spotify.js"></script>
 <script src="assets/javascript/getWeather.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=[key]&libraries=places"></script>
 <script src="assets/javascript/search.js"></script>
-<script>
+<!--<script>
  //feel free to delete this when appropriate. this is just to show spotify functionality
  $("#search").on("click", function() {
 
@@ -190,6 +143,5 @@
 
 
 
-</script>
+</script>-->
 </html>
->>>>>>> cf71f1949ef8d73a9be612f63f124b21e41c769f
