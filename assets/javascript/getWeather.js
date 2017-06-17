@@ -50,31 +50,42 @@ var mapWeatherCodes = function(weatherObject) {
     //5xx is 'Rain'
     if ((weatherId >=200 && weatherId < 400) || (weatherId >= 500 && weatherId < 600)) {
         return "rainy";
+        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Rainy.gif)");
     }
 
     //6xx is 'Snow'
     else if (weatherId >= 600 && weatherId < 700) {
         return "snowy";
+        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Snowy.gif)");
+
     }
 
     //7xx is 'Atmosphere'
     else if (weatherId >= 700 && weatherId <800) {
         return "windy";
+        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Windy.gif)");
+
     }
 
     //800 is 'Clear'
     else if (weatherId === 800) {
         return "sunny";
+        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Sunny.gif)");
+
     }
 
     //80x is 'Clouds'
     else if (weatherId > 800 && weatherId < 900) {
         return "cloudy";
+        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Cloudy.gif)");
+
     }
 
     //90x is 'Extreme'
     else if (weatherId >=900 && weatherId < 910) {
         return "extreme";
+        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Extreme.gif)");
+
     }
 
     //9xx is 'Additional'

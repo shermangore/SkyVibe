@@ -12,7 +12,7 @@
   <script src="https://use.fontawesome.com/a28dabef51.js"></script>
 </head>
 
-<body style="background: grey">
+<body>
   <div class="container">
     <!--Well for weather icon and city name -->
     <div class="weather-header">
@@ -22,30 +22,15 @@
     <div class="col-xs-2">
     </div>
     <div class="row">
-      <div id="player" style="position: fixed; bottom: 0px; width: 100%">
+      <div id="player" style="position: fixed; bottom: 0px; left: 0px; width: 100%">
       </div>
     </div>
   </div data="container">
-  <i class="fa fa-gear fa-3x"></i>
-  <!--<div class="pac-card" id="pac-card">
-    <div id="title">
-      Search for a city
-    </div>
-  </div>-->
-  <div id="pac-container">
-    <input id="pac-input" type="text" placeholder="Enter a location">
-  </div>
-  <div id="map"></div>
-  <!--<div id="infowindow-content">
-      <img src="" width="16" height="16" id="place-icon">
-      <span id="place-name"  class="title"></span><br>
-      <span id="place-address"></span>
-    </div>-->
+  
 
-<body>
 
 <div class="title-heading">
-    <h1>SkyVibe: Where the inside and outside meet. </h1>
+    <h1>SkyVibe: Where the inside and outside meet </h1>
 </div>
     <div class="container">
         <!-- Temporarily commented out, originally Jason's code
@@ -73,26 +58,22 @@
         <div id="player" style="position: fixed; bottom: 0px; width: 100%">
         </div>
     </div>
-    </div data="container">
     <i class="fa fa-gear fa-3x" id="mapModal"></i>
+  <!--<div class="pac-card" id="pac-card">
+    <div id="title">
+      Search for a city
+    </div>
+  </div>-->
+  <div id="pac-container">
+    <input id="pac-input" type="text" placeholder="Enter a location">
+  </div>
+  <div id="map"></div>
+  <!--<div id="infowindow-content">
+      <img src="" width="16" height="16" id="place-icon">
+      <span id="place-name"  class="title"></span><br>
+      <span id="place-address"></span>
+    </div>-->
 
-    <div class="pac-card" id="pac-card">
-        <div>
-            <div id="title">
-                Search for a city
-            </div>
-        </div>
-        <div id="pac-container">
-            <input id="pac-input" type="text" placeholder="Enter a location">
-        </div>
-    </div>
-    <div id="map"></div>
-    <div id="infowindow-content">
-        <img src="" width="16" height="16" id="place-icon">
-        <span id="place-name" class="title"></span>
-        <br>
-        <span id="place-address"></span>
-    </div>
 </body>
 <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 <script>
@@ -117,5 +98,6 @@ var config = {
 <script src="assets/javascript/spotify.js"></script>
 <script src="assets/javascript/getWeather.js"></script>
 <script src="assets/javascript/search.js"></script>
+<script src="assets/javascript/background.js"></script>
 
 </html>
