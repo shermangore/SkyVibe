@@ -55,7 +55,7 @@ var mapWeatherCodes = function(weatherObject) {
         return "rainy";
 
     } else if ((weatherId >=200 && weatherId < 300) || (weatherId >= 500 && weatherId < 600)) {
-        $('body').css('background-image', "url(https://media.giphy.com/media/q2CSpBL9hEKhW/giphy.gif)");
+        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Thunderstorm.gif)");
         return "thunderstorm";
 
     }
