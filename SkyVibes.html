@@ -13,25 +13,6 @@
 
 <body style="background: grey">
     <div class="container" >
-
-        <div class="row" >
-
-            <div class="col-xs-12"  style="padding-left: 0px; padding-right:0px" >
-
-                <div class="input-group">
-                    <span class="input-group-addon" id="lat-span">Latitude:</span>
-                    <input type="number" class="form-control" id="lat" placeholder="0" aria-describedby="basic-addon1">
-                    <span class="input-group-addon" id="long-span">Longitude:</span>
-                    <input type="number" class="form-control" id="long" placeholder="0" aria-describedby="basic-addon1">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" id="search">Search</button>
-                    </span>
-
-                </div>
-
-            </div data="col-xs-12">
-
-        </div data="row">
  <!-- Temporarily commented out, originally Jason's code
         <div class="row" >
             <div class="col-xs-2" >
@@ -121,27 +102,9 @@
 </script>
 
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWdhrRJkoYANWTpKvH08zVJD3D8gXNRM0&types=(regions)&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWdhrRJkoYANWTpKvH08zVJD3D8gXNRM0&types=(regions)&libraries=places&callback=initMap" async defer></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="assets/javascript/spotify.js"></script>
 <script src="assets/javascript/getWeather.js"></script>
 <script src="assets/javascript/search.js"></script>
-<!--<script>
- //feel free to delete this when appropriate. this is just to show spotify functionality
- $("#search").on("click", function() {
-
-     //get value of long; default to 0
-     var long = $("#long").val();
-     (long != '' && long < 180 && long > -180) ? long = long : long = 0;
-     //get value of lat; default to 0
-     var lat = $("#lat").val();
-     (lat != '' && lat < 180 && lat > -180) ? lat = lat : lat = 0;
-
-//     console.log("lat: " + lat + " long: " + long);
-     getWeatherCategory(lat, long);
- });
-
-
-
-</script>-->
 </html>

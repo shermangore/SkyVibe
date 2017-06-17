@@ -56,8 +56,11 @@ autocomplete.addListener('place_changed', function() {
         map.setCenter(place.geometry.location);
         map.setZoom(17);  // Why 17? Because it looks good.
     }
+
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
+
+    getWeatherCategory(place.geometry.location.lat(), place.geometry.location.lng());
 
     var address = '';
 
@@ -73,6 +76,7 @@ autocomplete.addListener('place_changed', function() {
     infowindowContent.children['place-name'].textContent = place.name;
     infowindowContent.children['place-address'].textContent = address;
     infowindow.open(map, marker);
+    $("#map").hide();
 });
 
 // Sets a listener on a radio button to change the filter type on Places
@@ -125,17 +129,3 @@ $(document).ready(function() {
         //$("#infowindow-content").toggle();
     });
 });
-
- //feel free to delete this when appropriate. this is just to show spotify functionality
- $("#search").on("click", function() {
-
-     //get value of long; default to 0
-     var long = $("#long").val();
-     (long != '' && long < 180 && long > -180) ? long = long : long = 0;
-     //get value of lat; default to 0
-     var lat = $("#lat").val();
-     (lat != '' && lat < 180 && lat > -180) ? lat = lat : lat = 0;
-
-//     console.log("lat: " + lat + " long: " + long);
-     getWeatherCategory(lat, long);
- });
