@@ -51,7 +51,7 @@ function initMap(myCenter) {
         // If the place has a geometry, then present it on a map.
         if (place.geometry.viewport) {
             map.fitBounds(place.geometry.viewport);
-            console.log(place.geometry.location.lat());
+            //console.log(place.geometry.location.lat());
         } else {
             map.setCenter(place.geometry.location);
             map.setZoom(17);  // Why 17? Because it looks good.
