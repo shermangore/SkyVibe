@@ -36,6 +36,8 @@ var getWeather = function(latitude, longitude, callback) {
             //  "cod":200}
             // console.log(data.weather[0].main);
             return callback(data.weather[0]);
+            return callback(data.name);
+            console.log(data.name);
         }); 
 }
 
@@ -89,6 +91,7 @@ var getWeatherCategory = function(latitude, longitude) {
         $("#player").html(spotify[mapWeatherCodes(data)]);
         $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.icon + ".png");
         $("#weather-desc").html(data.main);
+        $("#location-name").html(data.name)
     });
 }
 
