@@ -16,6 +16,8 @@ var getWeather = function(latitude, longitude, callback) {
     //set default return val to Sun
     var returnVal;
 
+    }
+
     $.ajax({
         url: URL,
         method: "GET",
@@ -36,8 +38,6 @@ var getWeather = function(latitude, longitude, callback) {
             //  "cod":200}
             // console.log(data.weather[0].main);
             return callback(data.weather[0]);
-            return callback(data.name);
-            console.log(data.name);
         }); 
 }
 
