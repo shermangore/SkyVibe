@@ -39,7 +39,7 @@ var getWeather = function(latitude, longitude, callback) {
             // console.log(data.weather[0].main);
             return callback(data.weather[0]);
         }); 
-}
+
 
 //takes the response from weather API and maps to values of
 // our spotify object: sunny, cloudy, rainy, snowy
