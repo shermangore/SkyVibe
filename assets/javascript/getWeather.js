@@ -54,6 +54,10 @@ var mapWeatherCodes = function(weatherObject) {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Rainy.gif)");
         return "rainy";
 
+    } else if ((weatherId >=200 && weatherId < 300) || (weatherId >= 500 && weatherId < 600)) {
+        $('body').css('background-image', "url(https://media.giphy.com/media/q2CSpBL9hEKhW/giphy.gif)");
+        return "thunderstorm";
+
     }
 
     //6xx is 'Snow'
