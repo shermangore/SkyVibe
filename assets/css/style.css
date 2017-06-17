@@ -59,12 +59,14 @@ body {
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
     width: 400px;
+    display: none;
 }
 
 #pac-input:focus {
     border-color: #4d90fe;
 }
 
+  
 .title-heading {
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
@@ -73,6 +75,7 @@ body {
 	text-align: center;
 	padding: 2em;
 	margin-top: 2%;
+
 	background-color: rgba(245, 245, 245, 0.4);
 	border-color: #d3d3d3;
 	border-width: 2px;
