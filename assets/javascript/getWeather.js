@@ -9,7 +9,7 @@ var getWeather = function(latitude, longitude, callback) {
     //sample URL:
     // api.openweathermap.org/data/2.5/weather?lat=35&lon=139
 
-    var URL = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${apiKey}`;
+    var URL = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&APPID=${apiKey}`;
     //set default return val to Sun
     var returnVal;
 
@@ -32,7 +32,7 @@ var getWeather = function(latitude, longitude, callback) {
             //  "name":"Shuzenji",
             //  "cod":200}
             // console.log(data.weather[0].main);
-            return callback({"weather": data.weather[0], "cityName": data.name});
+            return callback({"weather": data.weather[0], "cityName": data.name, "temperature": data.main.temp});
             //return callback(data.name);
             //console.log(data.name);
         }); 
@@ -105,5 +105,6 @@ var getWeatherCategory = function(latitude, longitude) {
         $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.weather.icon + ".png");
         $("#weather-desc").html(data.weather.main);
         $("#location-name").html(data.cityName);
+        $("#temperature").html("Temperature(F): " + data.temperature + "&deg");
     });
 }
