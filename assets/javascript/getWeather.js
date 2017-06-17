@@ -16,6 +16,8 @@ var getWeather = function(latitude, longitude, callback) {
     //set default return val to Sun
     var returnVal;
 
+    }
+
     $.ajax({
         url: URL,
         method: "GET",
@@ -36,8 +38,6 @@ var getWeather = function(latitude, longitude, callback) {
             //  "cod":200}
             // console.log(data.weather[0].main);
             return callback(data.weather[0]);
-            return callback(data.name);
-            console.log(data.name);
         }); 
 }
 
@@ -53,6 +53,10 @@ var mapWeatherCodes = function(weatherObject) {
     if ((weatherId >=200 && weatherId < 400) || (weatherId >= 500 && weatherId < 600)) {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Rainy.gif)");
         return "rainy";
+
+    } else if ((weatherId >=200 && weatherId < 300) || (weatherId >= 500 && weatherId < 600)) {
+        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Thunderstorm.gif)");
+        return "thunderstorm";
 
     }
 
