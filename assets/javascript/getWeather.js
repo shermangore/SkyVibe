@@ -6,17 +6,12 @@ var getWeather = function(latitude, longitude, callback) {
     (longitude) ? longitude : 0;
 
     //weather code dict from https://openweathermap.org/weather-conditions
-
-
-
     //sample URL:
     // api.openweathermap.org/data/2.5/weather?lat=35&lon=139
 
     var URL = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${apiKey}`;
     //set default return val to Sun
     var returnVal;
-
-    }
 
     $.ajax({
         url: URL,
@@ -37,14 +32,15 @@ var getWeather = function(latitude, longitude, callback) {
             //  "name":"Shuzenji",
             //  "cod":200}
             // console.log(data.weather[0].main);
-            return callback(data.weather[0]);
+            return callback({"weather": data.weather[0], "cityName": data.name});
+            //return callback(data.name);
+            //console.log(data.name);
         }); 
 }
 
 //takes the response from weather API and maps to values of
 // our spotify object: sunny, cloudy, rainy, snowy
 var mapWeatherCodes = function(weatherObject) {
-
     //use the 'id' of the object to conduct tests
     weatherId = weatherObject.id;
     //2xx is 'Thunderstorm'
@@ -52,47 +48,47 @@ var mapWeatherCodes = function(weatherObject) {
     //5xx is 'Rain'
     if ((weatherId >=200 && weatherId < 400) || (weatherId >= 500 && weatherId < 600)) {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Rainy.gif)");
+        $("#title-heading").removeClass("title-heading-dark")
+        $("#title-heading").addClass("title-heading-light")
         return "rainy";
-
-    } else if ((weatherId >=200 && weatherId < 300) || (weatherId >= 500 && weatherId < 600)) {
-        $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Thunderstorm.gif)");
-        return "thunderstorm";
-
     }
 
     //6xx is 'Snow'
     else if (weatherId >= 600 && weatherId < 700) {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Snowy.gif)");
+        $("#title-heading").removeClass("title-heading-dark")
+        $("#title-heading").addClass("title-heading-light")
         return "snowy";
-
     }
 
     //7xx is 'Atmosphere'
     else if (weatherId >= 700 && weatherId <800) {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Windy.gif)");
+        $("#title-heading").removeClass("title-heading-light")
+        $("#title-heading").addClass("title-heading-dark")
         return "windy";
-
     }
 
     //800 is 'Clear'
     else if (weatherId === 800) {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Sunny.gif)");
+        $("#title-heading").removeClass("title-heading-light")
+        $("#title-heading").addClass("title-heading-dark")
         return "sunny";
-
     }
 
     //80x is 'Clouds'
     else if (weatherId > 800 && weatherId < 900) {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Cloudy.gif)");
+        $("#title-heading").removeClass("title-heading-light")
+        $("#title-heading").addClass("title-heading-dark")
         return "cloudy";
-
     }
 
     //90x is 'Extreme'
     else if (weatherId >=900 && weatherId < 910) {
         $('body').css('background-image', "url(https://s3-us-west-1.amazonaws.com/skyvibes-images/Extreme.gif)");
         return "extreme";
-
     }
 
     //9xx is 'Additional'
@@ -100,14 +96,14 @@ var mapWeatherCodes = function(weatherObject) {
         return "unusual";
     }
 }
+
 //this function takes in lat and long
 // and sets the spotify player in the player element
 var getWeatherCategory = function(latitude, longitude) {
     return getWeather(latitude, longitude, function(data) {
-        $("#player").html(spotify[mapWeatherCodes(data)]);
-        $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.icon + ".png");
-        $("#weather-desc").html(data.main);
-        $("#location-name").html(data.name)
+        $("#player").html(spotify[mapWeatherCodes(data.weather)]);
+        $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.weather.icon + ".png");
+        $("#weather-desc").html(data.weather.main);
+        $("#location-name").html(data.cityName);
     });
 }
-
