@@ -40,7 +40,7 @@ html, body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     background-color: #fff;
     font-family: Roboto;
-    display: none;
+    /*display: none;*/
 }
 
 #pac-container {
@@ -57,6 +57,7 @@ html, body {
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
     width: 400px;
+    display: none;
 }
 
 #pac-input:focus {
