@@ -11,8 +11,8 @@ html, body {
 }
 
 body {
-	background-image: url(http://miriadna.com/desctopwalls/images/max/Perfect-weather.jpg);
-	background-size: cover;
+background-image: url(http://miriadna.com/desctopwalls/images/max/Perfect-weather.jpg);
+background-size: cover;
 }
 
 #description {
@@ -66,21 +66,51 @@ body {
     border-color: #4d90fe;
 }
 
+h1 {
+font-size: 50px;
+}
+
+#study-link {
+font-weight: heavy;
+}
+
+#about-link {
+background-color: rgba(245, 245, 245, 0.4);
+border-color: #d3d3d3;
+border-width: 2px;
+border-style: solid;
+border-radius: 10px;
+padding: 1em;
+top: 5%;
+left: 5%;
+position: absolute;
+
+}
+
+.modal-content {
+background-color: rgba(245, 245, 245, 0.9);
+border-color: #d3d3d3;
+border-width: 2px;
+border-style: solid;
+border-radius: 10px;
+padding: 1em;
+}
+
   
 .title-heading {
-	font-family: 'Raleway', sans-serif;
-	color: #fff;
-	margin-left: 32%;
-	margin-right: 33%;
-	text-align: center;
-	padding: 2em;
-	margin-top: 2%;
+font-family: 'Raleway', sans-serif;
+color: #fff;
+margin-left: 32%;
+margin-right: 33%;
+text-align: center;
+padding: 2em;
+margin-top: 2%;
 
-	background-color: rgba(245, 245, 245, 0.4);
-	border-color: #d3d3d3;
-	border-width: 2px;
-	border-style: solid;
-	border-radius: 25px;
+background-color: rgba(245, 245, 245, 0.4);
+border-color: #d3d3d3;
+border-width: 2px;
+border-style: solid;
+border-radius: 25px;
 
 }
 
@@ -98,17 +128,16 @@ body {
 }
 
 #mapModal {
-	top: 5%;
-	right: 5%;
-	position: absolute;
-	color: white;
+top: 5%;
+right: 5%;
+position: absolute;
+color: white;
 }
 
 .weather-header {
-	
-	top: 5%;
-	left: 5%;
-	position: absolute;
-	color: white;
-	font-family: 'Raleway', sans-serif;
+top: 5%;
+left: 5%;
+position: absolute;
+color: white;
+font-family: 'Raleway', sans-serif;
 }
