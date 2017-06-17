@@ -72,10 +72,10 @@ function initMap(myCenter) {
             ].join(' ');
         }
 
-        // infowindowContent.children['place-icon'].src = place.icon;
-        // infowindowContent.children['place-name'].textContent = place.name;
-        // infowindowContent.children['place-address'].textContent = address;
-        // infowindow.open(map, marker);
+       // infowindowContent.children['place-icon'].src = place.icon;
+       // infowindowContent.children['place-name'].textContent = place.name;
+       // infowindowContent.children['place-address'].textContent = address;
+       // infowindow.open(map, marker);
         $("#map").hide();
     });
 
