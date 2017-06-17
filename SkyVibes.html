@@ -2,51 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SkyVibes</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://use.fontawesome.com/a28dabef51.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SkyVibes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://use.fontawesome.com/a28dabef51.js"></script>
 </head>
-
-<body style="background: grey">
-  <div class="container">
-    <!--Well for weather icon and city name -->
-    <div class="weather-header">
-      <img src="" id="weather-icon" style="width:100%">
-      <h3 id="weather-desc" style="position: relative; bottom: 200px; padding: 75px"></h3>
-    </div>
-    <div class="col-xs-2">
-    </div>
-    <div class="row">
-      <div id="player" style="position: fixed; bottom: 0px; width: 100%">
-      </div>
-    </div>
-  </div data="container">
-  <i class="fa fa-gear fa-3x"></i>
-  <!--<div class="pac-card" id="pac-card">
-    <div id="title">
-      Search for a city
-    </div>
-  </div>-->
-  <div id="pac-container">
-    <input id="pac-input" type="text" placeholder="Enter a location">
-  </div>
-  <div id="map"></div>
-  <!--<div id="infowindow-content">
-      <img src="" width="16" height="16" id="place-icon">
-      <span id="place-name"  class="title"></span><br>
-      <span id="place-address"></span>
-    </div>-->
-
 <body>
-
-<div class="title-heading">
-    <h1>SkyVibe: Where the inside and outside meet. </h1>
-</div>
+    <div class="title-heading">
+        <h1>SkyVibe: Where the inside and outside meet. </h1>
+    </div>
     <div class="container">
         <!-- Temporarily commented out, originally Jason's code
         <div class="row" >
@@ -74,48 +42,43 @@
         </div>
     </div>
     </div data="container">
-    <i class="fa fa-gear fa-3x" id="mapModal"></i>
-
-    <div class="pac-card" id="pac-card">
-        <div>
-            <div id="title">
-                Search for a city
-            </div>
-        </div>
-        <div id="pac-container">
-            <input id="pac-input" type="text" placeholder="Enter a location">
-        </div>
+    <i class="fa fa-gear fa-3x"></i>
+    <!--<div class="pac-card" id="pac-card">
+    <div id="title">
+        Search for a city
+    </div>
+    </div>-->
+    <div id="pac-container">
+        <input id="pac-input" type="text" placeholder="Enter a location">
     </div>
     <div id="map"></div>
-    <div id="infowindow-content">
+    <!--<div id="infowindow-content">
         <img src="" width="16" height="16" id="place-icon">
-        <span id="place-name" class="title"></span>
-        <br>
+        <span id="place-name"  class="title"></span><br>
         <span id="place-address"></span>
-    </div>
+    </div>-->
 </body>
 <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 <script>
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDQU3oj6IicLbBeJENhcXXDFLd4t54uLNg",
-    authDomain: "skyvibe-35dfe.firebaseapp.com",
-    databaseURL: "https://skyvibe-35dfe.firebaseio.com",
-    projectId: "skyvibe-35dfe",
-    storageBucket: "skyvibe-35dfe.appspot.com",
-    messagingSenderId: "70151523481"
-  };
-  firebase.initializeApp(config);
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDQU3oj6IicLbBeJENhcXXDFLd4t54uLNg",
+        authDomain: "skyvibe-35dfe.firebaseapp.com",
+        databaseURL: "https://skyvibe-35dfe.firebaseio.com",
+        projectId: "skyvibe-35dfe",
+        storageBucket: "skyvibe-35dfe.appspot.com",
+        messagingSenderId: "70151523481"
+    };
 
+    firebase.initializeApp(config);
 </script>
 
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWdhrRJkoYANWTpKvH08zVJD3D8gXNRM0&types=(regions)&libraries=places&callback=initMap"
-  async defer></script>
+    async defer></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-  crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 <script src="assets/javascript/spotify.js"></script>
 <script src="assets/javascript/getWeather.js"></script>
 <script src="assets/javascript/search.js"></script>
-
 </html>
