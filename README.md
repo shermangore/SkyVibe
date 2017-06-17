@@ -1,7 +1,7 @@
 # SkyVibe
 Listen to what the weather feels like
 
-<h2>Objective<h2>
+<h2>Objective</h2>
 
 Web app that generates music for you based on the weather/location. Our web app will have a search function for users to look up cities, and then play music to fit the weather in that city. We’ll be using the Spotify API to search playlists and the openWeather API to look up the weather in that city. Our stack includes: HTML, CSS, Javascript, Firebase, Git, AJAX.
 
