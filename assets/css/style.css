@@ -200,3 +200,8 @@ h1 {
     width:100%;
     opacity: 0;
 }
+
+#temperature {
+    position: relative; 
+    top: 100px;
+}
