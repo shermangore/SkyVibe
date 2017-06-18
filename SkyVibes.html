@@ -42,14 +42,25 @@
             </div> -->
         <!--Well for weather icon and city name -->
         <div class="weather-header">
+<<<<<<< HEAD
             <img src="" id="weather-icon">
+=======
+            <img src="" id="weather-icon" style="width:100%">
+            <h3 id="location-name" style="position: relative; top: 100px;"></h3>
+>>>>>>> 54da59770236a76547eb6c22a706ccf524845c97
             <br>
+            <h3 id="temperature" style="position: relative; top: 100px;"></h3>
             <br>
+<<<<<<< HEAD
             <h3 id="location-name"></h3>
             <br>
             <br>
             <br>
             <h3 id="weather-desc" class="wd-light"></h3>
+=======
+            <br>
+            <h3 id="weather-desc" style="position: relative; top: 100px;"></h3>
+>>>>>>> 54da59770236a76547eb6c22a706ccf524845c97
         </div>
         <div class="col-xs-2">
         </div>
@@ -131,7 +142,9 @@ var config = {
     storageBucket: "skyvibe-35dfe.appspot.com",
     messagingSenderId: "70151523481"
 };
+
 firebase.initializeApp(config);
+
 </script>
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWdhrRJkoYANWTpKvH08zVJD3D8gXNRM0&types=(regions)&libraries=places&callback=initMap" async defer></script>
