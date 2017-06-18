@@ -74,9 +74,23 @@ h1 {
     font-weight: heavy;
 }
 
-#about-link {
+#about-link.al-light {
     background-color: rgba(245, 245, 245, 0.4);
+    color: #fff;
     border-color: #d3d3d3;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 1em;
+    top: 5%;
+    left: 5%;
+    position: absolute;
+}
+
+#about-link.al-dark {
+    background-color: rgba(245, 245, 245, 0.4);
+    color: #000;
+    border-color: #3d3d3d;
     border-width: 2px;
     border-style: solid;
     border-radius: 10px;
@@ -133,15 +147,20 @@ h1 {
     padding: 6px 12px;
 }
 
-.fa-gear {
-    cursor: pointer;
-}
-
-#mapModal {
+#mapModal.mm-light {
     top: 5%;
     right: 5%;
     position: absolute;
     color: white;
+    cursor: pointer;
+}
+
+#mapModal.mm-dark {
+    top: 5%;
+    right: 5%;
+    position: absolute;
+    color: #000;
+    cursor: pointer;
 }
 
 .weather-header {
@@ -150,4 +169,35 @@ h1 {
     position: absolute;
     color: white;
     font-family: 'Raleway', sans-serif;
+}
+
+#weather-desc.wd-light {
+    position: relative; 
+    bottom: 200px; 
+    padding: 75px;
+    color: #fff;
+}
+
+#weather-desc.wd-dark {
+    position: relative; 
+    bottom: 200px; 
+    padding: 75px;
+    color: #000;
+}
+
+#location-name {
+    position: relative; 
+    bottom: 200px; 
+    padding: 75px;
+}
+
+#player {
+    position: fixed; 
+    bottom: 0px; 
+    width: 100%;
+}
+
+#weather-icon {
+    width:100%;
+    opacity: 0;
 }
