@@ -197,22 +197,21 @@ top: 5%;
     position: absolute;
     color: white;
     font-family: 'Quicksand', sans-serif;
+    text-align: center;
 }
 
-#weather-desc.wd-light {
+#weather-header.wd-light {
     position: relative; 
-    bottom: 200px; 
-    padding: 75px;
     color: #fff;
     font-family: 'Quicksand', sans-serif;
+    text-align: center;
 }
 
-#weather-desc.wd-dark {
+#weather-header.wd-dark {
     position: relative; 
-    bottom: 200px; 
-    padding: 75px;
     color: #000;
     font-family: 'Quicksand', sans-serif;
+    
 }
 
 #location-name {
