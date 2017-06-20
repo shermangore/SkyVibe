@@ -154,7 +154,7 @@ var mapWeatherCodes = function(weatherObject) {
 var getWeatherCategory = function(latitude, longitude) {
     return getWeather(latitude, longitude, function(data) {
         $("#player").html(spotify[mapWeatherCodes(data.weather)]);
-        $("#weather-icon").attr("src", "https://crossorigin.me/http://openweathermap.org/img/w/" + data.weather.icon + ".png");
+        $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.weather.icon + ".png");
         $("#weather-desc").html("<br><br><br><br><br><br><b>" + data.cityName + "</b>" + "<br> Weather: " + data.weather.main + "<br>Temperature(F): " + data.temperature + "&deg");
 
     });
