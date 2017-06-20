@@ -77,6 +77,7 @@ function initMap(myCenter) {
        // infowindowContent.children['place-address'].textContent = address;
        // infowindow.open(map, marker);
         $("#map").hide();
+        $("#weather-icon").css("opacity", 1);
     });
 
     // Sets a listener on a radio button to change the filter type on Places
