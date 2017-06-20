@@ -1,6 +1,6 @@
 var getWeather = function(latitude, longitude, callback) {
     // api key for openweather API
-    var apiKey = "8f4f46158832bf4adc1d6f6abd4fbf53";
+    var apiKey = "f03434f363faa195e36ee5df87bd179d";
     //set defaults
     (latitude) ? latitude : 0;
     (longitude) ? longitude : 0;
