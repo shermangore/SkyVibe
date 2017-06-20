@@ -153,8 +153,8 @@ var getWeatherCategory = function(latitude, longitude) {
     return getWeather(latitude, longitude, function(data) {
         $("#player").html(spotify[mapWeatherCodes(data.weather)]);
         $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.weather.icon + ".png");
-        $("#weather-desc").html(data.weather.main);
-        $("#location-name").html(data.cityName);
-        $("#temperature").html("Temperature(F): " + data.temperature + "&deg");
+        $("#weather-desc").html("<br>" + data.cityName + "<br>Weather: " + data.weather.main + "<br>Temperature(F): " + data.temperature + "&deg");
+        // $("#location-name").html(data.cityName);
+        // $("#temperature").html("Temperature(F): <br>" + data.temperature + "&deg");
     });
 }
