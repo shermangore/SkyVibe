@@ -11,16 +11,6 @@ var config = {
 firebase.initializeApp(config);
 
 /**
- * Data object to be written to Firebase.
- */
-var weatherData = {
-  sender: null,
-  timestamp: null,
-  lat: null,
-  lng: null
-};
-
-/**
  * Starting point for running the program. Authenticates the user.
  * @param {function} Called when authentication succeeds.
  */
