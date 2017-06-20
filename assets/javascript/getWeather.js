@@ -1,6 +1,6 @@
 var getWeather = function(latitude, longitude, callback) {
     // api key for openweather API
-    var apiKey = "8f4f46158832bf4adc1d6f6abd4fbf53";
+    var apiKey = "f03434f363faa195e36ee5df87bd179d";
     //set defaults
     (latitude) ? latitude : 0;
     (longitude) ? longitude : 0;
@@ -32,7 +32,9 @@ var getWeather = function(latitude, longitude, callback) {
             //  "name":"Shuzenji",
             //  "cod":200}
             // console.log(data.weather[0].main);
+            
             return callback({"weather": data.weather[0], "cityName": data.name, "temperature": data.main.temp});
+
             //return callback(data.name);
             //console.log(data.name);
         });
