@@ -11,6 +11,7 @@ html, body {
 }
 
 body {
+	background-image: url(http://www.nasa.gov/sites/default/files/thumbnails/image/smap-weather.jpg);
     background-size: cover;
 }
 
