@@ -9,7 +9,7 @@ var getWeather = function(latitude, longitude, callback) {
     //sample URL:
     // api.openweathermap.org/data/2.5/weather?lat=35&lon=139
 
-    var URL = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&APPID=${apiKey}`;
+    var URL = `https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&APPID=${apiKey}`;
     //set default return val to Sun
     var returnVal;
 
@@ -32,7 +32,7 @@ var getWeather = function(latitude, longitude, callback) {
             //  "name":"Shuzenji",
             //  "cod":200}
             // console.log(data.weather[0].main);
-            
+
             return callback({"weather": data.weather[0], "cityName": data.name, "temperature": data.main.temp});
 
             //return callback(data.name);
@@ -154,7 +154,7 @@ var mapWeatherCodes = function(weatherObject) {
 var getWeatherCategory = function(latitude, longitude) {
     return getWeather(latitude, longitude, function(data) {
         $("#player").html(spotify[mapWeatherCodes(data.weather)]);
-        $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.weather.icon + ".png");
+        $("#weather-icon").attr("src", "https://crossorigin.me/http://openweathermap.org/img/w/" + data.weather.icon + ".png");
         $("#weather-desc").html("<br><br><br><br><br><br><b>" + data.cityName + "</b>" + "<br> Weather: " + data.weather.main + "<br>Temperature(F): " + data.temperature + "&deg");
 
     });
