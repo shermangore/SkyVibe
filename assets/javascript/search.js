@@ -31,18 +31,18 @@ function initMap(myCenter) {
         anchorPoint: new google.maps.Point(0, -29)
     });
 
-    map.addListener("click", function(e) {
-        // Get a reference to the database service
-        let database = firebase.database();
-        let weather = new weatherData("", new Date(), e.latLng.lat(), e.latLng.lng());
+    // map.addListener("click", function(e) {
+    //     // Get a reference to the database service
+    //     let database = firebase.database();
+    //     let weather = new weatherData("", new Date(), e.latLng.lat(), e.latLng.lng());
 
-        getWeatherCategory(e.latLng.lat(), e.latLng.lng());
+    //     getWeatherCategory(e.latLng.lat(), e.latLng.lng());
 
-        addWeatherToFirebase(weather);
+    //     addWeatherToFirebase(weather);
 
-        $("#map").hide();
-        $("#weather-icon").css("opacity", 1);
-    });
+    //     $("#map").hide();
+    //     $("#weather-icon").css("opacity", 1);
+    // });
 
     autocomplete.addListener('place_changed', function () {
         infowindow.close();
