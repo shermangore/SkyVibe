@@ -93,7 +93,7 @@ background-color: rgba(245, 245, 245, 0.4);
 
 #about-link.al-light {
     background-color: rgba(245, 245, 245, 0.4);
-    color: #fff;
+    color: #d3d3d3;
     border-color: #d3d3d3;
     border-width: 2px;
     border-style: solid;
@@ -142,7 +142,7 @@ background-color: rgba(245, 245, 245, 0.4);
     border-width: 2px;
     border-style: solid;
     border-radius: 25px;
-}  
+}
 
 .title-heading-dark {
     font-family: 'Quicksand', sans-serif;
@@ -171,7 +171,7 @@ background-color: rgba(245, 245, 245, 0.4);
 top: 5%;
     right: 5%;
     position: absolute;
-    color: #000;
+    color: black;
     cursor: pointer;
 }
 
@@ -179,7 +179,7 @@ top: 5%;
     top: 5%;
     right: 5%;
     position: absolute;
-    color: white;
+    color: #d3d3d3;
     cursor: pointer;
 }
 
@@ -192,49 +192,52 @@ top: 5%;
 }
 
 .weather-header {
-    top: 5%;
-    left: 5%;
+    top: 10%;
+    left: 10%;
     position: absolute;
     color: white;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
+    width: 200px
+    height: 200px;
 }
 
 #weather-header.wd-light {
-    position: relative; 
+    position: relative;
     color: #fff;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
 }
 
 #weather-header.wd-dark {
-    position: relative; 
+    position: relative;
     color: #000;
     font-family: 'Quicksand', sans-serif;
-    
+    text-align: center;
+
 }
 
 #location-name {
-    position: relative; 
-    bottom: 200px; 
+    position: relative;
+    bottom: 200px;
     padding: 75px;
     font-family: 'Quicksand', sans-serif;
 }
 
 #player {
-    position: fixed; 
-    bottom: 0px; 
+    position: fixed;
+    bottom: 0px;
     width: 100%;
 }
 
 #weather-icon {
-    width:100%;
-    opacity: 0;
-    
+  width: 200px;
+  height: 200px;
+  opacity: 0;
 }
 
 #temperature {
-    position: relative; 
+    position: relative;
     top: 100px;
     font-family: 'Quicksand', sans-serif;
 }
