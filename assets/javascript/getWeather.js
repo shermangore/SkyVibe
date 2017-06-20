@@ -9,7 +9,7 @@ var getWeather = function(latitude, longitude, callback) {
     //sample URL:
     // api.openweathermap.org/data/2.5/weather?lat=35&lon=139
 
-    var URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&APPID=${apiKey}`;
+    var URL = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&APPID=${apiKey}`;
     //set default return val to Sun
     var returnVal;
 
