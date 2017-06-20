@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SkyVibes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://use.fontawesome.com/a28dabef51.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--Well for weather icon and city name -->
+        <div class="weather-header">
+            <img src="" id="weather-icon" style="width:100%">
+            <h3 id="weather-desc" style="position: relative; bottom: 200px; padding: 75px"></h3>
+        </div>
+        <div class="col-xs-2">
+        </div>
+        <div class="row">
+            <div id="player" style="position: fixed; bottom: 0px; left: 0px; width: 100%">
+            </div>
+        </div>
+    </div data="container">
+    <div class="title-heading-light" id="title-heading">
+        <h1>SkyVibes</h1>
+        <p>Click the gear icon to get started. Look up any location using the search bar in the map, and we'll set the music for you.</p>
+    </div>
+    <div class="container">
+        <!-- Temporarily commented out, originally Jason's code
+        <div class="row" >
+            <div class="col-xs-2" >
+            </div>
+            
+            <div class="col-xs-8" >
+                <br><br><br>
+                <img src="" id="weather-icon" style="width:100%">
+                <h3 id="weather-desc" style="position: relative; bottom: 200px; padding: 75px"></h3>
+            </div> -->
+        <!--Well for weather icon and city name -->
+        <div class="weather-header">
+            <img src="" id="weather-icon" style="width:100%">
+            <h3 id="location-name" style="position: relative; top: 100px;"></h3>
+            <br>
+            <h3 id="temperature" style="position: relative; top: 100px;"></h3>
+            <br>
+            <br>
+            <h3 id="weather-desc" style="position: relative; top: 100px;"></h3>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div data="row">
+    <div class="row">
+        <div id="player" style="position: fixed; bottom: 0px; width: 100%">
+        </div>
+    </div>
+    <!--Modal for opening the map -->
+    <i class="fa fa-gear fa-3x" id="mapModal"></i>
+    <!--<div class="pac-card" id="pac-card">
+    <div id="title">
+      Search for a city
+    </div>
+  </div>-->
+    <div id="pac-container">
+        <input id="pac-input" type="text" placeholder="Enter a location">
+    </div>
+    <div id="map"></div>
+    <!--<div id="infowindow-content">
+      <img src="" width="16" height="16" id="place-icon">
+      <span id="place-name"  class="title"></span><br>
+      <span id="place-address"></span>
+    </div>-->
+    <!--Modal for About page -->
+    <!-- Large modal -->
+    <a href="#" class="btn btn-primary" 
+    data-toggle="modal" 
+    data-target=".bs-example-modal-lg" id="about-link">About</a>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <h2><i>From Spotify's Insights Blog</i></h2>
+                <p>When it rains, we put on a raincoat or get under an umbrella, because we can’t control the weather. We can, however, control what we hear while it’s raining, especially with services that let you play whatever you want. <a href="https://insights.spotify.com/bg/2017/02/07/spotify-accuweather-music-and-weather/" id="study-link">You can find more information on this study here.</a>
+                </p>
+                <p>
+                    <b>We wondered: Do people make different music-listening decisions based on weather?</b> 
+                    <br>
+                    This simple question led to what could be the largest-scale research ever conducted into the connection between music and atmospheric conditions. For the weather data, we partnered with Accuweather, a leading weather provider with over a billion users worldwide, and correlated a year’s worth of five kinds of weather data (sun, clouds, rain, wind, and snow), from nearly a thousand weather stations around the world, to over 85 billion anonymized, aggregated streams on Spotify on those same days and locations.
+                </p>
+                <p><h3>Some findings (there’s more city-level data in the graphs below):</h3>
+                </p>
+                <p>
+                    <ul>
+                        <li>Sunnier days bring higher-energy, happier-sounding music. Conversely, on rainy days, people generally tend to listen to lower-energy, sadder-sounding music.</li>
+                        <li>Rainy day tracks were much more acoustic than electronic, and exhibited higher levels of “organism,” a measure of how “human” a track sounds (i.e. a live drummer instead of a drum machine).</li>
+                        <li>Some cities respond strongly to the weather in their listening, while others respond less.</li>
+                        <li>In the US, for exampl:</li>
+                        <ul>
+                        <li>New York City and Philadelphia are most musically-affected by the rain.</li>
+                        <li>Dallas listens to the same kind of music when it’s overcast and when it rains.</li>
+                        <li>Seattle and Chicago are more impacted by overcast days than rain. Chicagoans are excited by rain, unlike most cities, and least excited by clouds.</li>
+                        <li>Houston responds the most strongly to rain, out of the cities in our study. The acousticness of Houston’s listening in the rain increases 121 percent.</li>
+                        </ul>
+                        <li>In the UK, like other countries, rainy weather leads to sadder music –but brits aren’t always happiest in the sun.</li>
+                        <ul>
+                        <li>Leeds is happiest on cloudy days.</li>
+                        <li>Unlike almost every other major city, Liverpool and Manchester play happier music when it snows.</li>
+                        <li>Cloudy days are more danceable in the UK than sunny days, bucking the global trend — especially in London and Liverpool, which see the biggest boosts in danceable music in the sun.</li>
+                        <li>Manchester goes for instrumental music on rainy days, and also listens to music that’s good for running when it rains.</li>
+                        <li>Of major Australian cities, Sydney listens to the saddest music when it rains, and is one of the most affected cities in the world in that way.</li>
+                        </ul>
+                        <li>Australian cities tend towards acoustic music on rainy days, while Kiwis want acoustic-sounding music when the sun’s out.</li>
+                        <li>Unlike the rest of Australia (and most of the world), Brisbane chooses more runnable music on cloudy days.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDQU3oj6IicLbBeJENhcXXDFLd4t54uLNg",
+    authDomain: "skyvibe-35dfe.firebaseapp.com",
+    databaseURL: "https://skyvibe-35dfe.firebaseio.com",
+    projectId: "skyvibe-35dfe",
+    storageBucket: "skyvibe-35dfe.appspot.com",
+    messagingSenderId: "70151523481"
+};
+
+firebase.initializeApp(config);
+
+</script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWdhrRJkoYANWTpKvH08zVJD3D8gXNRM0&types=(regions)&libraries=places&callback=initMap" async defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="assets/javascript/spotify.js"></script>
+<script src="assets/javascript/getWeather.js"></script>
+<script src="assets/javascript/search.js"></script>
+
+</html>
