@@ -12,7 +12,7 @@ html, body {
 
 body {
     background-size: cover;
-    background-image: url('https://s3-us-west-1.amazonaws.com/skyvibes-images/WeatherCollage.jpg');
+    background-image: url('https://s3-us-west-1.amazonaws.com/skyvibes-images/WeatherCollage.png');
 }
 
 #description {
