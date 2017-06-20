@@ -1,11 +1,8 @@
 // This example requires the Places library. Include the libraries=places
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-
 function initMap(myCenter) {
     var map = new google.maps.Map(document.getElementById('map'), {
-        //center: {lat: 34.0593615, lng: -118.4460819},
         center: myCenter,
         zoom: 13
     });
@@ -32,6 +29,19 @@ function initMap(myCenter) {
     var marker = new google.maps.Marker({
         map: map,
         anchorPoint: new google.maps.Point(0, -29)
+    });
+
+    map.addListener("click", function(e) {
+        // Get a reference to the database service
+        let database = firebase.database();
+        let weather = new weatherData("", new Date(), e.latLng.lat(), e.latLng.lng());
+
+        getWeatherCategory(e.latLng.lat(), e.latLng.lng());
+
+        addWeatherToFirebase(weather);
+
+        $("#map").hide();
+        $("#weather-icon").css("opacity", 1);
     });
 
     autocomplete.addListener('place_changed', function () {
@@ -136,7 +146,6 @@ $(document).ready(function () {
 
             if ("geolocation" in navigator) {
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    console.log(position);
                     initMap(new google.maps.LatLng(34.0593615, -118.4460819));
                 });
             } else {
