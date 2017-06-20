@@ -34,7 +34,10 @@ var getWeather = function(latitude, longitude, callback) {
             // console.log(data.weather[0].main);
             
             return callback({"weather": data.weather[0], "cityName": data.name, "temperature": data.main.temp});
-        }); 
+
+            //return callback(data.name);
+            //console.log(data.name);
+        });
 }
 
 //takes the response from weather API and maps to values of
@@ -110,8 +113,8 @@ var mapWeatherCodes = function(weatherObject) {
         $("#mapModal").removeClass("mm-light");
         $("#mapModal").addClass("mm-dark");
 
-        $("#weather-desc").removeClass("wd-dark");
-        $("#weather-desc").addClass("wd-light");
+        $("#weather-desc").removeClass("wd-light");
+        $("#weather-desc").addClass("wd-dark");
 
         return "sunny";
     }
@@ -152,8 +155,7 @@ var getWeatherCategory = function(latitude, longitude) {
     return getWeather(latitude, longitude, function(data) {
         $("#player").html(spotify[mapWeatherCodes(data.weather)]);
         $("#weather-icon").attr("src", "http://openweathermap.org/img/w/" + data.weather.icon + ".png");
-        $("#weather-desc").html("<br>" + data.cityName + "<br>Weather: " + data.weather.main + "<br>Temperature(F): " + data.temperature + "&deg");
-        // $("#location-name").html(data.cityName);
-        // $("#temperature").html("Temperature(F): <br>" + data.temperature + "&deg");
+        $("#weather-desc").html("<br><br><br><br><br><br><b>" + data.cityName + "</b>" + "<br> Weather: " + data.weather.main + "<br>Temperature(F): " + data.temperature + "&deg");
+
     });
 }

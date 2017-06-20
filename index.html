@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://use.fontawesome.com/a28dabef51.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand|Roboto" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <!--Well for weather icon and city name -->
         <div class="weather-header">
-            <img src="" id="weather-icon" style="width:100%">
-            <h3 id="weather-desc" style="position: relative; bottom: 200px; padding: 75px"></h3>
+            <img src="" id="weather-icon">
+            <h3 id="weather-desc" style="position: relative; top: -220px; padding: 30px"></h3>
         </div>
         <div class="col-xs-2">
         </div>
@@ -30,6 +31,7 @@
         <p>Click the gear icon to get started. Look up any location using the search bar in the map, and we'll set the music for you.</p>
     </div>
     <div class="container">
+
         <!--Well for weather icon and city name -->
         <div class="weather-header">
             <img src="" id="weather-icon">
@@ -55,17 +57,19 @@
     <div id="map"></div>
     <!--Modal for About page -->
     <!-- Large modal -->
-    <a href="#" class="btn btn-primary al-light" 
-    data-toggle="modal" 
+    <a href="#" class="btn btn-primary al-light"
+    data-toggle="modal"
     data-target=".bs-example-modal-lg" id="about-link">About</a>
     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
+                <h2><i>Built By</i></h2>
+                <p><a href="https://github.com/shermangore/">Sherman Gore</a>, <a href="https://github.com/julietshen/">Juliet Shen</a>, and <a href="https://github.com/jrmesser">Jason Messer.</a></p>
                 <h2><i>From Spotify's Insights Blog</i></h2>
                 <p>When it rains, we put on a raincoat or get under an umbrella, because we can’t control the weather. We can, however, control what we hear while it’s raining, especially with services that let you play whatever you want. <a href="https://insights.spotify.com/bg/2017/02/07/spotify-accuweather-music-and-weather/" id="study-link">You can find more information on this study here.</a>
                 </p>
                 <p>
-                    <b>We wondered: Do people make different music-listening decisions based on weather?</b> 
+                    <b>We wondered: Do people make different music-listening decisions based on weather?</b>
                     <br>
                     This simple question led to what could be the largest-scale research ever conducted into the connection between music and atmospheric conditions. For the weather data, we partnered with Accuweather, a leading weather provider with over a billion users worldwide, and correlated a year’s worth of five kinds of weather data (sun, clouds, rain, wind, and snow), from nearly a thousand weather stations around the world, to over 85 billion anonymized, aggregated streams on Spotify on those same days and locations.
                 </p>
@@ -79,7 +83,6 @@
                         <li>In the US, for exampl:</li>
                         <ul>
                         <li>New York City and Philadelphia are most musically-affected by the rain.</li>
-                        <li>Dallas listens to the same kind of music when it’s overcast and when it rains.</li>
                         <li>Seattle and Chicago are more impacted by overcast days than rain. Chicagoans are excited by rain, unlike most cities, and least excited by clouds.</li>
                         <li>Houston responds the most strongly to rain, out of the cities in our study. The acousticness of Houston’s listening in the rain increases 121 percent.</li>
                         </ul>
@@ -91,8 +94,6 @@
                         <li>Manchester goes for instrumental music on rainy days, and also listens to music that’s good for running when it rains.</li>
                         <li>Of major Australian cities, Sydney listens to the saddest music when it rains, and is one of the most affected cities in the world in that way.</li>
                         </ul>
-                        <li>Australian cities tend towards acoustic music on rainy days, while Kiwis want acoustic-sounding music when the sun’s out.</li>
-                        <li>Unlike the rest of Australia (and most of the world), Brisbane chooses more runnable music on cloudy days.</li>
                     </ul>
                 </p>
             </div>
