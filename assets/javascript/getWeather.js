@@ -32,9 +32,8 @@ var getWeather = function(latitude, longitude, callback) {
             //  "name":"Shuzenji",
             //  "cod":200}
             // console.log(data.weather[0].main);
+            
             return callback({"weather": data.weather[0], "cityName": data.name, "temperature": data.main.temp});
-            //return callback(data.name);
-            //console.log(data.name);
         }); 
 }
 
